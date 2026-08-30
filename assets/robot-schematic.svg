@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">ESP32 Quadruped Robot Schematic</title>
+  <desc id="desc">Technical blueprint of a quadruped robot platform featuring ESP32 control logic and 3-DOF per leg kinematics.</desc>
+  
+  <!-- Background / Technical Grid -->
+  <rect width="1200" height="675" fill="#f8fafc"/>
+  <g fill="none" stroke="#e2e8f0" stroke-width="1" opacity="0.6">
+    <path d="M0 40h1200M0 80h1200M0 120h1200M0 160h1200M0 200h1200M0 240h1200M0 280h1200M0 320h1200M0 360h1200M0 400h1200M0 440h1200M0 480h1200M0 520h1200M0 560h1200M0 600h1200M0 640h1200"/>
+    <path d="M40 0v675M80 0v675M120 0v675M160 0v675M200 0v675M240 0v675M280 0v675M320 0v675M360 0v675M400 0v675M440 0v675M480 0v675M520 0v675M560 0v675M600 0v675M640 0v675M680 0v675M720 0v675M760 0v675M800 0v675M840 0v675M880 0v675M920 0v675M960 0v675M1000 0v675M1040 0v675M1080 0v675M1120 0v675M1160 0v675"/>
+  </g>
+
+  <!-- Central Processor / Body Frame -->
+  <g fill="none" stroke="#1e293b" stroke-width="3">
+    <rect x="400" y="240" width="400" height="180" rx="12" stroke-dasharray="8,4"/>
+    <rect x="440" y="280" width="320" height="100" rx="4" fill="#ffffff" stroke-width="2"/>
+  </g>
+
+  <!-- Processor Annotations -->
+  <g fill="#1e293b" font-family="monospace" font-size="14" font-weight="700">
+    <text x="455" y="315">ESP32-S2 DUAL-CORE</text>
+    <text x="455" y="335">FREERTOS / 240MHz</text>
+    <text x="455" y="355" fill="#2563eb">UDP TELEMETRY ACTIVE</text>
+  </g>
+
+  <!-- Leg Assemblies (Kinematic Lines) -->
+  <g stroke="#64748b" stroke-width="6" stroke-linecap="round">
+    <!-- Front Left -->
+    <path d="M400 260 L280 180 L200 280"/>
+    <!-- Front Right -->
+    <path d="M800 260 L920 180 L1000 280"/>
+    <!-- Back Left -->
+    <path d="M400 400 L280 480 L200 580"/>
+    <!-- Back Right -->
+    <path d="M800 400 L920 480 L1000 580"/>
+  </g>
+
+  <!-- Joint Markers -->
+  <g fill="#ffffff" stroke="#1e293b" stroke-width="3">
+    <circle cx="400" cy="260" r="8"/> <!-- Coxa FL -->
+    <circle cx="800" cy="260" r="8"/> <!-- Coxa FR -->
+    <circle cx="400" cy="400" r="8"/> <!-- Coxa BL -->
+    <circle cx="800" cy="400" r="8"/> <!-- Coxa BR -->
+    
+    <circle cx="280" cy="180" r="6" stroke="#2563eb"/> <!-- Femur FL -->
+    <circle cx="920" cy="180" r="6" stroke="#2563eb"/> <!-- Femur FR -->
+  </g>
+
+  <!-- Technical Labels -->
+  <g fill="#64748b" font-family="monospace" font-size="12" font-weight="600" letter-spacing="1">
+    <text x="50" y="50">REF_ID: SESAME_CORE_V2</text>
+    <text x="50" y="75">SCALE: 1:2.5 MM</text>
+    <text x="50" y="600">DOF: 12 (3 PER LEG)</text>
+    <text x="50" y="625">ACTUATORS: MG996R SERVO</text>
+    
+    <text x="900" y="50" text-anchor="end">COORD: [X, Y, Z]</text>
+    <text x="900" y="75" text-anchor="end">STATUS: CALIBRATED</text>
+    <text x="1150" y="625" text-anchor="end" fill="#1e293b">GROQ_AI_COMPANION_LINK</text>
+  </g>
+
+  <!-- Leg Focus Highlight -->
+  <circle cx="280" cy="180" r="40" fill="none" stroke="#2563eb" stroke-width="1" stroke-dasharray="4,2" opacity="0.5"/>
+  <line x1="280" y1="140" x2="280" y2="100" stroke="#2563eb" stroke-width="1"/>
+  <text x="280" y="90" fill="#2563eb" font-family="monospace" font-size="10" text-anchor="middle">J2: FEMUR_JOINT</text>
+</svg>
