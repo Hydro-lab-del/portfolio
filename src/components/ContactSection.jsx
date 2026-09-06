@@ -102,7 +102,7 @@ export const ContactSection = () => {
             Contact & Collaboration
           </h2>
           <p className="text-[#334155] font-body-md text-body-md max-w-2xl">
-            Interested in discussing systems architecture, embedded robotics, or full-stack software development? Let's connect.
+            Have a question, project idea, or job opportunity? I'd love to hear from you.
           </p>
         </motion.div>
 
@@ -198,9 +198,9 @@ export const ContactSection = () => {
                 <div className="w-14 h-14 rounded-full bg-emerald-100 text-emerald-700 mx-auto flex items-center justify-center shadow-inner">
                   <Check className="w-7 h-7" />
                 </div>
-                <h3 className="text-xl font-bold text-[#0F172A]">Transmission Dispatched</h3>
+                <h3 className="text-xl font-bold text-[#0F172A]">Message Sent!</h3>
                 <p className="font-body-sm text-sm text-[#475569] max-w-md mx-auto leading-relaxed">
-                  Thank you, <span className="font-semibold text-[#0F172A]">{name}</span>. Your message has been logged. I will review your inquiry and follow up at <span className="font-semibold text-[#0F172A]">{email}</span> promptly.
+                  Thank you, <span className="font-semibold text-[#0F172A]">{name}</span>. I got your message and will reply to <span className="font-semibold text-[#0F172A]">{email}</span> soon.
                 </p>
                 <button
                   type="button"
@@ -296,7 +296,7 @@ export const ContactSection = () => {
                     className="w-full sm:w-auto flex-1 py-3 px-6 bg-[#0F172A] hover:bg-[#334155] disabled:opacity-50 text-white rounded-xl font-label-md text-xs font-semibold flex items-center justify-center gap-2 transition-all shadow-xs active:scale-98 cursor-pointer"
                   >
                     <Send className="w-3.5 h-3.5" />
-                    <span>{isSubmitting ? 'Transmitting...' : 'Send Message'}</span>
+                    <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
                   </button>
 
                   <button

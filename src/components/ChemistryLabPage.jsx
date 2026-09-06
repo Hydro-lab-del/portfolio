@@ -55,7 +55,7 @@ export const ChemistryLabPage = ({ onBack, onOpenContact }) => {
       phase: 'Phase 3',
       title: 'AI Diagnostic Engine',
       status: 'In Progress',
-      items: ['Gemini SDK integration', 'Procedural error analysis', 'Automated AI grading']
+      items: ['Gemini SDK integration', 'Step-by-step error checking', 'AI-assisted grading']
     },
     {
       phase: 'Phase 4 & 5',
@@ -106,7 +106,7 @@ export const ChemistryLabPage = ({ onBack, onOpenContact }) => {
               Virtual Chemistry Lab
             </h1>
             <p className="text-lg text-slate-600 leading-relaxed">
-              A high-precision 3D workbench solving the safety and cost barriers of physical science education through WebGL and AI.
+              A browser-based 3D chemistry lab that removes safety risks and equipment costs from student experiments.
             </p>
           </motion.div>
 
@@ -116,7 +116,7 @@ export const ChemistryLabPage = ({ onBack, onOpenContact }) => {
                <div className="relative z-10">
                 <div className="text-blue-400 text-[10px] font-bold tracking-widest uppercase mb-4">Core Engine</div>
                 <h3 className="text-2xl font-bold mb-2 text-pretty">WebGL 60 FPS Physics Pipeline</h3>
-                <p className="text-slate-400 text-sm leading-relaxed">Three.js scene management with Redux-synchronized state for deterministic experiments.</p>
+                <p className="text-slate-400 text-sm leading-relaxed">Three.js renders the 3D lab while Redux manages experiment state so results stay consistent.</p>
                </div>
                <div className="mt-8 flex flex-wrap gap-2 relative z-10">
                   {['React 19', 'Three.js', 'Redux', 'GLSL'].map(t => (
@@ -237,7 +237,7 @@ export const ChemistryLabPage = ({ onBack, onOpenContact }) => {
         <section className="bg-white border border-slate-200 rounded-4xl p-10 md:p-14 space-y-10 shadow-sm">
            <div className="space-y-2">
               <h2 className="text-3xl font-bold text-slate-900">Project Roadmap</h2>
-              <p className="text-slate-500 text-sm">Strategic execution from graphics prototype to AI production.</p>
+              <p className="text-slate-500 text-sm">Development timeline from prototype to current features.</p>
            </div>
 
            <div className="space-y-3">

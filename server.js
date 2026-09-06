@@ -15,7 +15,7 @@ async function startServer() {
     res.json({
       status: 'ok',
       timestamp: new Date().toISOString(),
-      service: 'CS Scholar Full-Stack Engine',
+      service: 'Portfolio Server',
       environment: process.env.NODE_ENV || 'development'
     });
   });
@@ -37,7 +37,7 @@ async function startServer() {
     console.log(`[Contact API] Received message from ${name} <${email}>: [${subject}] ${message}`);
     res.json({
       success: true,
-      message: 'Transmission logged successfully in systems queue.',
+      message: 'Message received.',
       dispatchId: `TX-${Date.now().toString().slice(-6)}`
     });
   });
@@ -86,7 +86,7 @@ async function startServer() {
   }
 
   app.listen(PORT, '0.0.0.0', () => {
-    console.log(`CS Scholar Full-Stack Server running on http://localhost:${PORT}`);
+    console.log(`Portfolio Server running on http://localhost:${PORT}`);
   });
 }
 

@@ -216,7 +216,7 @@ export const ResumeModal = ({ onClose }) => {
                   </span>
                 </div>
                 <p className="font-body-sm text-xs text-[#334155] leading-relaxed">
-                  Engineered an interactive 3D web laboratory enabling real-time chemical titrations, reaction simulations, telemetry visualization, and AI-driven experiment analysis. Optimized shader rendering for 60 FPS performance under continuous particle interactions.
+                  Built an interactive 3D web lab for chemistry titrations with live data visualization and AI-assisted feedback. Renders at 60 FPS using Three.js with custom shaders.
                 </p>
               </div>
 
@@ -224,14 +224,14 @@ export const ResumeModal = ({ onClose }) => {
               <div className="p-4 sm:p-5 border border-[#E5E7EB] rounded-xl bg-[#F9FAFB] space-y-2">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
                   <div className="font-headline-md text-sm font-bold text-[#0F172A]">
-                    Quadruped Robot Platform & AI Companion
+                     Quadruped Robot Platform & Desktop Companion
                   </div>
-                  <span className="font-label-sm text-[11px] text-[#0F172A] bg-white px-2 py-0.5 rounded border border-[#E5E7EB] w-fit font-semibold">
-                    LOLIN ESP32-S2 Mini • SG90 Servos • Python Groq AI
+                   <span className="font-label-sm text-[11px] text-[#0F172A] bg-white px-2 py-0.5 rounded border border-[#E5E7EB] w-fit font-semibold">
+                     LOLIN ESP32-S2 Mini • SG90 Servos • Python + Groq LLM
                   </span>
                 </div>
                 <p className="font-body-sm text-xs text-[#334155] leading-relaxed">
-                  Built a custom 3D-printed PLA quadruped robot with LOLIN ESP32-S2 Mini, 0.96" I2C OLED display rendering dynamic ( • ω • ) face expressions, and 3-DOF SG90 servo kinematics. Created a Python Desktop Companion with voice control and Groq AI companion intelligence.
+                   Built a custom 3D-printed PLA quadruped robot with LOLIN ESP32-S2 Mini, 0.96" I2C OLED display rendering dynamic ( • ω • ) face expressions, and 3-DOF SG90 servo kinematics. Created a Python desktop companion with voice control and Groq LLM chat.
                 </p>
               </div>
 
@@ -246,7 +246,7 @@ export const ResumeModal = ({ onClose }) => {
                   </span>
                 </div>
                 <p className="font-body-sm text-xs text-[#334155] leading-relaxed">
-                  Developed an encrypted markdown collaborative workspace featuring sub-15ms typing synchronization, client-side cryptographic security, and cloud persistence.
+                   Built a notes workspace with rich-text editing, instant local UI updates, and background server sync.
                 </p>
               </div>
 

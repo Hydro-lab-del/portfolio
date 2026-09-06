@@ -1,5 +1,5 @@
 import React, { useEffect, Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { AnimatePresence } from 'motion/react';
 
 // Core Immediate Components (Landing Page Critical Path)
@@ -94,6 +94,9 @@ export default function App() {
             <Route path="/robot" element={
               <RobotProjectPage onOpenContact={() => setIsContactOpen(true)} />
             } />
+
+            {/* Catch-all redirect */}
+            <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </Suspense>
 

@@ -1,6 +1,6 @@
 # Junaid Ilyas — Full-Stack Developer & Systems Portfolio
 
-A modern, responsive engineering portfolio showcasing full-stack web applications, interactive 3D WebGL simulations, and embedded robotics hardware builds.
+My portfolio website — built with React 19, Three.js, and Tailwind CSS. Shows my web projects, a chemistry lab simulator, and an ESP32 robot.
 
 [![React 19](https://img.shields.io/badge/React-19.0-61DAFB?style=flat&logo=react&logoColor=black)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-6.0-646CFF?style=flat&logo=vite&logoColor=white)](https://vitejs.dev/)
@@ -13,14 +13,14 @@ A modern, responsive engineering portfolio showcasing full-stack web application
 ## 🌟 Featured Engineering Projects
 
 ### 1. 🧪 Virtual Chemistry Lab (BS CS Final Year Project)
-- High-precision 3D web laboratory enabling real-time chemical titrations, telemetry visualization, and AI-driven experiment analysis.
-- **Key Features**: 60 FPS WebGL shader molecular kinetics, Runge-Kutta numerical differential equation solver, MongoDB Atlas persistence, and in-memory dual-token JWT authentication.
+- High-precision 3D web laboratory for practicing titrations with live data visualization and AI-assisted feedback.
+- **Key Features**: 60 FPS Three.js rendering, Runge-Kutta ODE solver for reactions, MongoDB storage, and JWT authentication.
 - **Tech Stack**: React 19, Three.js / WebGL, Redux Toolkit, Node.js, Express, MongoDB.
 
-### 2. 🤖 Quadruped Robot Platform & AI Companion (Sesame)
+### 2. 🤖 Quadruped Robot Platform & Desktop Companion (Sesame)
 - Accessible 3D-printed PLA quadruped robot with real-time 3-DOF inverse kinematics and animated emotive expressions.
 - **Hardware Architecture**: LOLIN ESP32-S2 Mini (240MHz single-core Xtensa LX7), 0.96" I2C OLED display `( • ω • )`, SG90 micro servos, and custom top power PCB.
-- **Software Suite**: FreeRTOS 100Hz multi-channel PWM control loop, trigonometric gait solver (Trot, Crawl, Wave, Stand), and Python Desktop Companion with voice control and Groq AI telemetry.
+- **Software Suite**: FreeRTOS servo control at 100Hz, walking gait solver (Trot, Crawl, Wave, Stand), and a Python desktop app with voice control and Groq LLM chat.
 
 ### 3. 📝 NotesNest — Encrypted Cloud Workspace
 - Collaborative markdown notes workspace with sub-15ms typing synchronization and client-side cryptography.
@@ -34,7 +34,7 @@ A modern, responsive engineering portfolio showcasing full-stack web application
 | :--- | :--- |
 | **Frontend UI** | React 19, Tailwind CSS v4, Motion (Framer Motion), Lucide React |
 | **3D & Graphics** | Three.js, WebGL Shaders, Canvas Confetti |
-| **Backend & APIs** | Node.js, Express.js, FormSubmit.co Email Pipeline, REST APIs |
+| **Backend & APIs** | Node.js, Express.js, FormSubmit.co Email Relay, REST APIs |
 | **Embedded & Robotics** | LOLIN ESP32-S2 Mini, FreeRTOS, SG90 Servos, SSD1306 OLED, I2C/SPI/UART |
 | **Build & Tooling** | Vite 6, ESBuild, Git, PostCSS |
 

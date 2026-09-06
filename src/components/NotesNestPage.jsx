@@ -70,7 +70,7 @@ export const NotesNestPage = ({ onOpenContact }) => {
             </div>
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight">NotesNest</h1>
             <p className="text-lg text-slate-600 leading-relaxed">
-              A modular workspace engineered for speed and security, featuring rich-text composition and an optimistic sync pipeline.
+              A fast, secure note-taking workspace with a rich-text editor and instant UI updates.
             </p>
           </div>
 
@@ -145,7 +145,7 @@ export const NotesNestPage = ({ onOpenContact }) => {
                <span className="text-blue-400 font-bold text-[10px] uppercase tracking-widest">Performance Engine</span>
                <h2 className="text-3xl font-bold leading-tight">Infinite Masonry & 400ms Debounced Queries</h2>
                <p className="text-slate-400 leading-relaxed text-sm">
-                 To maintain 60FPS during heavy document filtering, I implemented a custom debounced query pipeline. This reduces API overhead by 80% while providing a smooth, near-instant search experience even with thousands of entries.
+                 Search queries are debounced to avoid flooding the server — this reduced API calls by ~80% and keeps scrolling smooth.
                </p>
                <div className="flex gap-8 pt-4">
                   <div>

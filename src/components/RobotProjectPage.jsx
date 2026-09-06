@@ -124,7 +124,7 @@ export const RobotProjectPage = ({ onOpenContact }) => {
               Quadruped Robot Platform
             </h1>
             <p className="text-lg text-slate-600 leading-relaxed">
-              An accessible quadruped robot built upon open-source robotics architecture, powered by a LOLIN ESP32-S2 Mini, 0.96&quot; I2C OLED emotive display, SG90 servo kinematics, and a custom Desktop Companion application with Voice & AI control.
+              An accessible quadruped robot built upon open-source robotics designs, powered by a LOLIN ESP32-S2 Mini, 0.96&quot; I2C OLED emotive display, SG90 servo kinematics, and a custom Python desktop app with voice commands.
             </p>
           </motion.div>
 
@@ -265,7 +265,7 @@ export const RobotProjectPage = ({ onOpenContact }) => {
               </div>
               <h3 className="text-3xl font-bold">Sesame Desktop Companion</h3>
               <p className="text-slate-300 text-sm leading-relaxed">
-                A purpose-built desktop control and conversational AI hub communicating with the robot over Wi-Fi network sockets and serial telemetry.
+                A Python desktop app for controlling the robot over Wi-Fi and chatting with it via Groq's language model.
               </p>
 
               <div className="grid grid-cols-2 gap-4 pt-2">
@@ -277,9 +277,9 @@ export const RobotProjectPage = ({ onOpenContact }) => {
                 </div>
                 <div className="p-4 bg-white/5 rounded-2xl border border-white/10">
                   <div className="flex items-center gap-2 text-emerald-400 text-xs font-bold mb-1">
-                    <MessageSquare className="w-4 h-4" /> Dual AI Engine
+                    <MessageSquare className="w-4 h-4" /> LLM Chat
                   </div>
-                  <p className="text-[11px] text-slate-400">Groq Llama-3 cloud intelligence with local state fallback.</p>
+                  <p className="text-[11px] text-slate-400">Groq Llama-3 for chat, with a local fallback.</p>
                 </div>
                 <div className="p-4 bg-white/5 rounded-2xl border border-white/10">
                   <div className="flex items-center gap-2 text-indigo-400 text-xs font-bold mb-1">
@@ -373,7 +373,7 @@ export const RobotProjectPage = ({ onOpenContact }) => {
         <section className="bg-white border border-slate-200 rounded-4xl p-10 md:p-14 space-y-10 shadow-sm">
           <div className="space-y-2">
             <h2 className="text-3xl font-bold text-slate-900">Platform Milestones & Roadmap</h2>
-            <p className="text-slate-500 text-sm">Strategic progression from 3D printing and firmware calibration to conversational desktop companion.</p>
+            <p className="text-slate-500 text-sm">Build timeline from 3D-printed frame to working desktop companion app.</p>
           </div>
 
           <div className="space-y-3">
