@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { ArrowRight, Sparkles, Cpu, FileText, FlaskConical, Box } from 'lucide-react';
+import { ArrowRight, Sparkles, Cpu, FileText, FlaskConical, Box, ExternalLink } from 'lucide-react';
 import { PROJECTS_DATA } from '../data/scholarData';
 
 const cardVariants = {
@@ -34,8 +34,8 @@ export const ProjectsSection = ({ onSelectProject }) => {
           <h2 className="font-headline-lg text-headline-lg text-[#0F172A] tracking-tight">
             Selected Works
           </h2>
-          <p className="text-on-surface-variant  font-body-md text-body-md max-w-2xl">
-            A collection of systems architecture, hardware integrations, and full-stack platforms.
+          <p className="text-on-surface-variant font-body-md text-body-md max-w-2xl">
+            Full-stack web applications, RESTful services, and creative engineering projects.
           </p>
         </motion.div>
 
@@ -165,6 +165,17 @@ export const ProjectsSection = ({ onSelectProject }) => {
                       <span>{project.actionText || 'Explore Project'}</span>
                       <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
                     </button>
+                    {project.liveUrl && (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="ml-4 inline-flex items-center gap-2 font-label-md text-label-md font-semibold text-blue-700 hover:text-blue-900 transition-colors"
+                      >
+                        <span>Open NotesNest</span>
+                        <ExternalLink className="w-4 h-4" />
+                      </a>
+                    )}
                   </div>
                 </div>
               </motion.article>

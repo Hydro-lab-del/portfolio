@@ -10,6 +10,7 @@ import {
   Code, 
   Cpu, 
   Globe, 
+  Database,
   ExternalLink,
   Mail,
   Github,
@@ -36,10 +37,10 @@ export const ResumeModal = ({ onClose }) => {
         initial={{ opacity: 0, scale: 0.96, y: 10 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.96, y: 10 }}
-        className="relative w-full max-w-4xl bg-white border border-[#E5E7EB] rounded-2xl soft-shadow overflow-hidden my-auto max-h-[92vh] flex flex-col text-[#0F172A]"
+        className="relative w-full max-w-4xl bg-white border border-outline-variant rounded-2xl soft-shadow overflow-hidden my-auto max-h-[92vh] flex flex-col text-[#0F172A]"
       >
         {/* Modal Top Action Bar */}
-        <div className="flex flex-wrap items-center justify-between px-5 sm:px-6 py-3.5 border-b border-[#E5E7EB] bg-[#F9FAFB] gap-3">
+        <div className="flex flex-wrap items-center justify-between px-5 sm:px-6 py-3.5 border-b border-outline-variant bg-[#F9FAFB] gap-3">
           <div className="flex items-center gap-2.5">
             <GraduationCap className="w-5 h-5 text-[#0F172A]" />
             <h3 id="resume-dialog-title" className="font-headline-md text-sm sm:text-base font-bold text-[#0F172A]">
@@ -51,7 +52,7 @@ export const ResumeModal = ({ onClose }) => {
             <a
               href="/resume.pdf"
               download="Junaid_Ilyas_CV.pdf"
-              className="flex items-center gap-1.5 px-3 py-1.5 bg-[#0F172A] hover:bg-[#334155] text-white rounded-lg font-label-sm text-xs font-semibold transition-colors shadow-xs cursor-pointer"
+              className="flex items-center gap-1.5 px-3 py-1.5 bg-[#0F172A] hover:bg-on-surface-variant text-white rounded-lg font-label-sm text-xs font-semibold transition-colors shadow-xs cursor-pointer"
             >
               <Download className="w-3.5 h-3.5" />
               <span>Download PDF</span>
@@ -60,7 +61,7 @@ export const ResumeModal = ({ onClose }) => {
             <button
               type="button"
               onClick={onClose}
-              className="p-1.5 text-[#64748B] hover:text-[#0F172A] rounded-lg hover:bg-[#F3F4F6] transition-colors cursor-pointer"
+              className="p-1.5 text-[#64748B] hover:text-[#0F172A] rounded-lg hover:bg-surface-variant transition-colors cursor-pointer"
               aria-label="Close modal"
             >
               <X className="w-5 h-5" />
@@ -72,7 +73,7 @@ export const ResumeModal = ({ onClose }) => {
         <div className="flex-1 overflow-y-auto p-5 sm:p-8 md:p-10 space-y-8 bg-white font-body-md text-[#0F172A]">
           
           {/* 1. Header Section */}
-          <div className="border-b border-[#E5E7EB] pb-6 space-y-3">
+          <div className="border-b border-outline-variant pb-6 space-y-3">
             <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
               <h1 className="font-display-lg text-2xl sm:text-3xl font-bold text-[#0F172A] tracking-tight">
                 {SCHOLAR_INFO.name}
@@ -82,8 +83,8 @@ export const ResumeModal = ({ onClose }) => {
               </span>
             </div>
 
-            <p className="text-[#334155] font-label-md text-sm font-semibold">
-              Full-Stack Developer • BS Computer Science (2023 — 2027)
+            <p className="text-on-surface-variant font-label-md text-sm font-semibold">
+              Full-Stack MERN Developer • BS Computer Science (2023 — 2027)
             </p>
 
             <div className="flex flex-wrap items-center gap-3 sm:gap-4 font-label-sm text-xs text-[#64748B] pt-1">
@@ -111,18 +112,18 @@ export const ResumeModal = ({ onClose }) => {
               Academic Honors & Scholarships
             </h4>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-              <div className="p-4 bg-[#F9FAFB] rounded-xl border border-[#E5E7EB]">
+              <div className="p-4 bg-[#F9FAFB] rounded-xl border border-outline-variant">
                 <div className="font-headline-md text-sm font-bold text-[#0F172A]">PEEF Excellence Scholarship</div>
                 <div className="font-label-sm text-xs text-[#64748B] mt-0.5">Punjab Educational Endowment Fund</div>
-                <p className="font-body-sm text-xs text-[#334155] mt-2 leading-relaxed">
+                <p className="font-body-sm text-xs text-on-surface-variant mt-2 leading-relaxed">
                   Prestigious merit scholarship awarded to top academic performers in computer science and engineering disciplines.
                 </p>
               </div>
 
-              <div className="p-4 bg-[#F9FAFB] rounded-xl border border-[#E5E7EB]">
+              <div className="p-4 bg-[#F9FAFB] rounded-xl border border-outline-variant">
                 <div className="font-headline-md text-sm font-bold text-[#0F172A]">Dean's Honor List</div>
                 <div className="font-label-sm text-xs text-[#64748B] mt-0.5">Academic Excellence Recognition</div>
-                <p className="font-body-sm text-xs text-[#334155] mt-2 leading-relaxed">
+                <p className="font-body-sm text-xs text-on-surface-variant mt-2 leading-relaxed">
                   Consistently recognized on the Dean's Honor List for outstanding academic performance and leadership in computing coursework.
                 </p>
               </div>
@@ -135,7 +136,7 @@ export const ResumeModal = ({ onClose }) => {
               <BookOpen className="w-4 h-4 text-[#0F172A]" />
               Education & Relevant Coursework
             </h4>
-            <div className="p-4 sm:p-5 border border-[#E5E7EB] rounded-xl bg-white space-y-3">
+            <div className="p-4 sm:p-5 border border-outline-variant rounded-xl bg-white space-y-3">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
                 <span className="font-headline-md text-sm sm:text-base font-bold text-[#0F172A]">
                   Bachelor of Science in Computer Science
@@ -147,8 +148,8 @@ export const ResumeModal = ({ onClose }) => {
               
               <div>
                 <span className="font-label-sm text-xs font-semibold text-[#0F172A]">Core Computing Coursework:</span>
-                <p className="font-body-sm text-xs text-[#334155] mt-1 leading-relaxed">
-                  Data Structures & Algorithms, Operating Systems, Computer Graphics & WebGL, Embedded Systems & Microcontrollers, Distributed Systems, Database Management Systems, Computer Networks, Object-Oriented Programming (OOP), Software Engineering.
+                <p className="font-body-sm text-xs text-on-surface-variant mt-1 leading-relaxed">
+                  Web Application Engineering, Database Management Systems (DBMS), Data Structures & Algorithms, Object-Oriented Programming (OOP), Computer Networks, Operating Systems, Software Engineering & System Design.
                 </p>
               </div>
             </div>
@@ -162,36 +163,36 @@ export const ResumeModal = ({ onClose }) => {
             </h4>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs">
               
-              {/* Programming Languages */}
-              <div className="p-3.5 bg-[#F9FAFB] rounded-xl border border-[#E5E7EB] space-y-1.5">
+              {/* Core Languages */}
+              <div className="p-3.5 bg-[#F9FAFB] rounded-xl border border-outline-variant space-y-1.5">
                 <div className="font-bold text-[#0F172A] flex items-center gap-1.5">
                   <Code className="w-3.5 h-3.5 text-blue-600" />
-                  <span>Languages</span>
+                  <span>Core Languages</span>
                 </div>
-                <p className="text-[#334155] leading-relaxed">
-                  C, C++, Python, JavaScript (ES6+), TypeScript, SQL, HTML5, CSS3.
+                <p className="text-on-surface-variant leading-relaxed">
+                  JavaScript (ES6+), HTML5, CSS3, SQL
                 </p>
               </div>
 
-              {/* Embedded & Hardware */}
-              <div className="p-3.5 bg-[#F9FAFB] rounded-xl border border-[#E5E7EB] space-y-1.5">
-                <div className="font-bold text-[#0F172A] flex items-center gap-1.5">
-                  <Cpu className="w-3.5 h-3.5 text-cyan-600" />
-                  <span>Embedded & Robotics</span>
-                </div>
-                <p className="text-[#334155] leading-relaxed">
-                  LOLIN ESP32-S2 Mini, FreeRTOS, SG90 Servos, SSD1306 OLED, I2C/SPI/UART, PWM Timers, 3D-Printed PLA.
-                </p>
-              </div>
-
-              {/* Web & Graphics */}
-              <div className="p-3.5 bg-[#F9FAFB] rounded-xl border border-[#E5E7EB] space-y-1.5">
+              {/* Frontend Architecture */}
+              <div className="p-3.5 bg-[#F9FAFB] rounded-xl border border-outline-variant space-y-1.5">
                 <div className="font-bold text-[#0F172A] flex items-center gap-1.5">
                   <Globe className="w-3.5 h-3.5 text-indigo-600" />
-                  <span>Web & 3D Graphics</span>
+                  <span>Frontend Architecture</span>
                 </div>
-                <p className="text-[#334155] leading-relaxed">
-                  React 19, Three.js / WebGL, Tailwind CSS v4, Node.js, Express.js, MongoDB Atlas, Redux Toolkit, REST APIs.
+                <p className="text-on-surface-variant leading-relaxed">
+                  React 19, Redux Toolkit, Tailwind CSS, Component Architecture, Responsive Web Design, REST API Integration.
+                </p>
+              </div>
+
+              {/* Backend & Databases */}
+              <div className="p-3.5 bg-[#F9FAFB] rounded-xl border border-outline-variant space-y-1.5">
+                <div className="font-bold text-[#0F172A] flex items-center gap-1.5">
+                  <Database className="w-3.5 h-3.5 text-emerald-600" />
+                  <span>Backend & Databases</span>
+                </div>
+                <p className="text-on-surface-variant leading-relaxed">
+                  Node.js, Express.js, MongoDB Atlas, Mongoose ODM, JWT Authentication, RESTful APIs, Postman, Git & GitHub.
                 </p>
               </div>
             </div>
@@ -200,53 +201,53 @@ export const ResumeModal = ({ onClose }) => {
           {/* 5. Featured Technical Projects */}
           <div>
             <h4 className="font-label-sm text-xs font-bold text-[#64748B] uppercase tracking-wider mb-3 flex items-center gap-2">
-              <Briefcase className="w-4 h-4 text-[#334155]" />
+              <Briefcase className="w-4 h-4 text-on-surface-variant" />
               Featured Technical Projects
             </h4>
             <div className="space-y-3">
               
               {/* Virtual Chemistry Lab */}
-              <div className="p-4 sm:p-5 border border-[#E5E7EB] rounded-xl bg-[#F9FAFB] space-y-2">
+              <div className="p-4 sm:p-5 border border-outline-variant rounded-xl bg-[#F9FAFB] space-y-2">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
                   <div className="font-headline-md text-sm font-bold text-[#0F172A]">
                     Virtual Chemistry Lab Suite (BS CS FYP)
                   </div>
-                  <span className="font-label-sm text-[11px] text-[#0F172A] bg-white px-2 py-0.5 rounded border border-[#E5E7EB] w-fit font-semibold">
-                    Three.js / WebGL • React 19 • MongoDB
+                  <span className="font-label-sm text-[11px] text-[#0F172A] bg-white px-2 py-0.5 rounded border border-outline-variant w-fit font-semibold">
+                    MERN Stack • React 19 • Node.js • MongoDB Atlas
                   </span>
                 </div>
-                <p className="font-body-sm text-xs text-[#334155] leading-relaxed">
-                  Built an interactive 3D web lab for chemistry titrations with live data visualization and AI-assisted feedback. Renders at 60 FPS using Three.js with custom shaders.
+                <p className="font-body-sm text-xs text-on-surface-variant leading-relaxed">
+                  Built an interactive 3D full-stack chemistry simulation platform with React 19, Three.js WebGL visuals, Node.js/Express backend APIs, and MongoDB Atlas persistence.
                 </p>
               </div>
 
               {/* Quadruped Robot */}
-              <div className="p-4 sm:p-5 border border-[#E5E7EB] rounded-xl bg-[#F9FAFB] space-y-2">
+              <div className="p-4 sm:p-5 border border-outline-variant rounded-xl bg-[#F9FAFB] space-y-2">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
                   <div className="font-headline-md text-sm font-bold text-[#0F172A]">
-                     Quadruped Robot Platform & Desktop Companion
+                     Quadruped Robot Platform (Hardware Showcase)
                   </div>
-                   <span className="font-label-sm text-[11px] text-[#0F172A] bg-white px-2 py-0.5 rounded border border-[#E5E7EB] w-fit font-semibold">
-                     LOLIN ESP32-S2 Mini • SG90 Servos • Python + Groq LLM
+                   <span className="font-label-sm text-[11px] text-[#0F172A] bg-white px-2 py-0.5 rounded border border-outline-variant w-fit font-semibold">
+                     ESP32-S2 Mini • SG90 Servos • Hardware Showcase
                   </span>
                 </div>
-                <p className="font-body-sm text-xs text-[#334155] leading-relaxed">
-                   Built a custom 3D-printed PLA quadruped robot with LOLIN ESP32-S2 Mini, 0.96" I2C OLED display rendering dynamic ( • ω • ) face expressions, and 3-DOF SG90 servo kinematics. Created a Python desktop companion with voice control and Groq LLM chat.
+                <p className="font-body-sm text-xs text-on-surface-variant leading-relaxed">
+                   Exploratory hardware & robotics project: Built a 3D-printed quadruped walking robot platform powered by an ESP32-S2 microcontroller, 0.96" I2C OLED display rendering dynamic expressions, and SG90 servo kinematics with desktop control.
                 </p>
               </div>
 
               {/* NotesNest */}
-              <div className="p-4 sm:p-5 border border-[#E5E7EB] rounded-xl bg-[#F9FAFB] space-y-2">
+              <div className="p-4 sm:p-5 border border-outline-variant rounded-xl bg-[#F9FAFB] space-y-2">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
                   <div className="font-headline-md text-sm font-bold text-[#0F172A]">
-                    NotesNest — Cloud Markdown Workspace
+                    NotesNest — Modular Productivity Workspace
                   </div>
-                  <span className="font-label-sm text-[11px] text-[#0F172A] bg-white px-2 py-0.5 rounded border border-[#E5E7EB] w-fit font-semibold">
-                    React • Node.js • AES-256 Cryptography
+                  <span className="font-label-sm text-[11px] text-[#0F172A] bg-white px-2 py-0.5 rounded border border-outline-variant w-fit font-semibold">
+                    MERN Stack • React 19 • Express 5 • MongoDB Atlas
                   </span>
                 </div>
-                <p className="font-body-sm text-xs text-[#334155] leading-relaxed">
-                   Built a notes workspace with rich-text editing, instant local UI updates, and background server sync.
+                <p className="font-body-sm text-xs text-on-surface-variant leading-relaxed">
+                   Built a modular full-stack productivity workspace featuring rich-text editing, MongoDB persistence, automated background reminders, and protected authentication.
                 </p>
               </div>
 

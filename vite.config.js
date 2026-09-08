@@ -7,12 +7,15 @@ import { defineConfig } from 'vite';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Custom Vite middleware to handle /api/contact during dev
+// Custom Vite middleware to handle /api/contact and /resume.pdf download headers during dev
 function apiDevPlugin() {
   return {
     name: 'api-dev-middleware',
     configureServer(server) {
       server.middlewares.use((req, res, next) => {
+        if (req.url.startsWith('/resume.pdf')) {
+          res.setHeader('Content-Disposition', 'attachment; filename="Junaid_Ilyas_CV.pdf"');
+        }
         if (req.url === '/api/contact' && req.method === 'POST') {
           let body = '';
           req.on('data', (chunk) => { body += chunk; });

@@ -4,10 +4,10 @@ import robotPreview from '../../assets/robot-preview.jpg';
 
 export const SCHOLAR_INFO = {
   name: "Junaid Ilyas",
-  tagline: "Full-stack developer who builds web apps, 3D simulations, and hobby robotics",
-  badge: "Available for Opportunities",
-  subtitle: "Full-Stack Developer | BS Computer Science (2023 — 2027) | PEEF Scholar",
-  bio: "Computer Science student (PEEF Scholar) with hands-on experience building web apps with React and Node.js, 3D browser simulations with Three.js, and an ESP32-based hobby robot.",
+  tagline: "Full-Stack MERN Developer building modern, scalable web platforms",
+  badge: "Available for MERN Opportunities",
+  subtitle: "BS Computer Science (2023 — 2027) • PEEF Merit Scholar",
+  bio: "Passionate about engineering responsive React frontends, secure Node.js & Express REST APIs, and clean database architectures with MongoDB Atlas.",
   contactEmail: "j8881817@gmail.com",
   links: {
     github: "https://github.com/Hydro-lab-del",
@@ -20,9 +20,9 @@ export const PROJECTS_DATA = [
   {
     id: "virtual-chemistry-lab",
     title: "Virtual Chemistry Lab",
-    subtitle: "Interactive 3D Chemistry Simulation (Final Year Project)",
-    description: "A 3D browser-based chemistry lab where students can practice titrations, view live graphs, and get feedback from an AI assistant. Built with React, Three.js, and MongoDB.",
-    tags: ["Final Year Project", "Three.js / WebGL", "React 19", "Redux Toolkit", "MongoDB Atlas"],
+    subtitle: "Interactive 3D Chemistry Simulation Platform (BS CS FYP)",
+    description: "A browser-based full-stack chemistry simulation platform built with the MERN stack. Features interactive 3D WebGL titration experiments, real-time data graphing, dual-token JWT authentication, and AI-assisted feedback.",
+    tags: ["MERN Stack", "React 19", "Node.js / Express", "MongoDB Atlas", "Three.js ", "Redux Toolkit"],
     image: labScreenshot,
     imageWidth: 1600,
     imageHeight: 900,
@@ -30,18 +30,38 @@ export const PROJECTS_DATA = [
     actionText: "Explore Full FYP Case Study",
     modalType: "chemistry-detail",
     stats: [
-      { label: "Architecture", value: "MERN + Three.js" },
-      { label: "Rendering", value: "60 FPS WebGL" },
+      { label: "Architecture", value: "MERN Stack" },
+      { label: "Client", value: "React 19 + WebGL" },
       { label: "Security", value: "Dual-Token JWT" },
-      { label: "AI Assist", value: "Gemini API" }
+      { label: "Database", value: "MongoDB Atlas" }
+    ]
+  },
+  {
+    id: "notesnest-workspace",
+    title: "NotesNest",
+    subtitle: "Full-Stack MERN Productivity Workspace",
+    description: "A modular note-taking web application featuring rich-text editing, automated email reminders, and a soft-delete trash recovery system. Built entirely on the MERN stack with in-memory auth and MongoDB Atlas.",
+    tags: ["MERN Stack", "React 19", "Express 5", "MongoDB Atlas", "Node.js", "TipTap 3"],
+    image: dashboardScreenshot,
+    imageWidth: 1600,
+    imageHeight: 900,
+    imageAlt: "NotesNest Workspace Dashboard",
+    actionText: "Explore NotesNest Case Study",
+    liveUrl: "https://notenest-web.vercel.app/welcome",
+    modalType: "notes-detail",
+    stats: [
+      { label: "Architecture", value: "MERN Stack" },
+      { label: "Editor", value: "TipTap 3 Rich Text" },
+      { label: "Security", value: "In-Memory Auth" },
+      { label: "Database", value: "MongoDB Atlas" }
     ]
   },
   {
     id: "quadruped-robot-ai",
     title: "Quadruped Robot Platform",
-    subtitle: "LOLIN ESP32-S2 Mini + SG90 Servos + 0.96\" OLED",
-    description: "A 3D-printed four-legged walking robot powered by an ESP32 with an OLED face display, controllable from a Python desktop app with voice commands.",
-    tags: ["LOLIN ESP32-S2 Mini", "SG90 Micro Servos", "0.96\" OLED", "Desktop Companion", "Groq LLM"],
+    subtitle: "Hardware Engineering & Robotics Showcase (Hobby)",
+    description: "A custom 3D-printed four-legged walking robot built as an exploratory hardware project, featuring an ESP32 microcontroller, 0.96\" OLED facial display, and desktop control interface.",
+    tags: ["Hardware Showcase", "ESP32-S2 Mini", "SG90 Micro Servos", "0.96\" OLED", "IoT Prototyping"],
     image: robotPreview,
     imageWidth: 1600,
     imageHeight: 900,
@@ -52,58 +72,41 @@ export const PROJECTS_DATA = [
       { label: "MCU Core", value: "ESP32-S2 Mini" },
       { label: "Servos", value: "SG90 Micro" },
       { label: "Display", value: "0.96\" I2C OLED" },
-      { label: "Software", value: "Python Companion" }
-    ]
-  },
-  {
-    id: "notesnest-workspace",
-    title: "NotesNest",
-    subtitle: "Modular Note-Taking & Task Workspace",
-    description: "A note-taking web app with a rich-text editor, reminders via email, and a soft-delete trash system. Built with React, Express, and MongoDB.",
-    tags: ["React 19", "Express 5", "TipTap 3", "MongoDB Atlas", "Brevo API"],
-    image: dashboardScreenshot,
-    imageWidth: 1600,
-    imageHeight: 900,
-    imageAlt: "NotesNest Workspace Dashboard",
-    actionText: "Explore NotesNest Case Study",
-    modalType: "notes-detail",
-    stats: [
-      { label: "Architecture", value: "MERN Stack" },
-      { label: "Editor", value: "TipTap 3 + Sanitizer" },
-      { label: "Security", value: "In-Memory Auth" },
-      { label: "Scheduler", value: "Brevo / Cron" }
+      { label: "Category", value: "Hardware Showcase" }
     ]
   }
 ];
 
 export const SKILL_CATEGORIES = [
   {
-    title: "Programming",
+    title: "Frontend Architecture",
     icon: "code",
     skills: [
-      { name: "C/C++", level: "Advanced", experience: "Coursework & Robotics", description: "Embedded firmware, memory management, and real-time control loops." },
-      { name: "Python", level: "Advanced", experience: "Projects & Scripting", description: "API integrations (Groq, OpenAI), scripting, and basic computer vision." },
-      { name: "JavaScript", level: "Proficient", experience: "Web Projects", description: "Modern JS (ES6+), async programming, and DOM manipulation." },
-      { name: "TypeScript", level: "Proficient", experience: "Recent Projects", description: "Static typing, generics, and interface design for safer code." }
+      { name: "React 19", role: "Core Frontend", experience: "Web Projects", description: "Component-driven UI, modern hooks (useState, useEffect, useMemo), state management, and responsive SPA routing." },
+      { name: "JavaScript (ES6+)", role: "Core Language", experience: "Web Applications", description: "Modern ES6+ syntax, asynchronous programming (async/await, promises), DOM manipulation, closures, and modular architecture." },
+      { name: "Tailwind CSS", role: "UI Styling", experience: "Design Systems", description: "Utility-first responsive styling, modern layout design (flexbox/grid), custom tokens, and smooth micro-interactions." },
+      { name: "Redux Toolkit", role: "State Management", experience: "App Architecture", description: "Centralized state management, slices, reducers, and predictable state flow for complex client applications." },
+      { name: "HTML5 & CSS3", role: "Web Foundation", experience: "Semantic Web", description: "Semantic markup, modern CSS layouts, responsive web principles, and accessibility standards." }
     ]
   },
   {
-    title: "Frameworks",
+    title: "Backend & API Engineering",
     icon: "layers",
     skills: [
-      { name: "React", level: "Proficient", experience: "All Web Projects", description: "React hooks, state management, and component lifecycle." },
-      { name: "Node.js", level: "Advanced", experience: "Backend Projects", description: "REST APIs, WebSocket servers, and background tasks." },
-      { name: "Express", level: "Advanced", experience: "Backend Projects", description: "Middleware, API routing, authentication, and error handling." },
-      { name: "Three.js / WebGL", level: "Proficient", experience: "FYP Project", description: "Three.js, 3D geometry, and scene management." }
+      { name: "Node.js", role: "Server Runtime", experience: "Backend Systems", description: "Asynchronous event-driven server runtime, RESTful service creation, file streams, and npm ecosystem management." },
+      { name: "Express.js", role: "API Framework", experience: "Backend Systems", description: "Modular API routing, custom middleware pipelines, request validation, error-handling middleware, and CORS configuration." },
+      { name: "RESTful APIs", role: "API Architecture", experience: "Full-Stack Integration", description: "Clean CRUD endpoint design, HTTP status conventions, URL routing, JSON data exchange, and pagination." },
+      { name: "JWT Auth & Security", role: "Web Security", experience: "Auth Workflows", description: "Dual-token authentication workflows, access/refresh tokens, password hashing with bcrypt, and protected routes." }
     ]
   },
   {
-    title: "Hardware",
+    title: "Database & Tooling",
     icon: "memory",
     skills: [
-      { name: "ESP32-S2", level: "Advanced", experience: "Robot Project", description: "FreeRTOS task scheduling, Wi-Fi networking, and I2C/SPI sensor interfaces." },
-      { name: "Arduino", level: "Advanced", experience: "Coursework & Hobby", description: "Microcontroller prototyping, PWM servo control, and analog circuits." },
-      { name: "ARM Cortex", level: "Intermediate", experience: "Coursework", description: "Bare-metal programming, register-level debugging, and low-power sleep modes." }
+      { name: "MongoDB Atlas", role: "NoSQL Database", experience: "Cloud Databases", description: "NoSQL document database, schema modeling, collection management, document indexing, and cloud Atlas configuration." },
+      { name: "Mongoose ODM", role: "Data Modeling", experience: "Data Layer", description: "Mongoose schemas, validation rules, relationship references, pre/post middleware hooks, and aggregation pipelines." },
+      { name: "Postman", role: "API Testing", experience: "Testing & Debugging", description: "Endpoint debugging, automated request testing, environment variables, and API documentation." },
+      { name: "Git & GitHub", role: "Version Control", experience: "Collaboration", description: "Version control workflows, commit standards, branch management, pull requests, and repository maintenance." }
     ]
   }
 ];

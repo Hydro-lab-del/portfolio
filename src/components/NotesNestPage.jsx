@@ -43,7 +43,7 @@ export const NotesNestPage = ({ onOpenContact }) => {
     >
       {/* 1. STICKY HEADER */}
       <motion.header variants={itemVariants} className="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-slate-200 w-full">
-        <div className="flex justify-between items-center w-full px-6 max-w-[1120px] mx-auto h-16">
+        <div className="flex justify-between items-center w-full px-6 max-w-container-max mx-auto h-16">
           <button
             onClick={() => navigate('/')}
             className="flex items-center gap-2 text-slate-500 hover:text-slate-900 font-medium text-sm transition-colors group"
@@ -60,7 +60,7 @@ export const NotesNestPage = ({ onOpenContact }) => {
         </div>
       </motion.header>
 
-      <main className="max-w-[1120px] mx-auto px-6 py-12 space-y-24 w-full">
+      <main className="max-w-container-max mx-auto px-6 py-12 space-y-24 w-full">
         
         {/* 2. HERO & BENTO METADATA */}
         <motion.section variants={itemVariants} className="space-y-10">
@@ -116,7 +116,7 @@ export const NotesNestPage = ({ onOpenContact }) => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Pillar: Security */}
-            <div className="p-10 bg-white border border-slate-200 rounded-[2rem] space-y-6 hover:shadow-md transition-shadow">
+            <div className="p-10 bg-white border border-slate-200 rounded-4xl space-y-6 hover:shadow-md transition-shadow">
                <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center">
                  <ShieldCheck className="w-6 h-6" />
                </div>
@@ -127,7 +127,7 @@ export const NotesNestPage = ({ onOpenContact }) => {
             </div>
 
             {/* Pillar: Optimistic UI */}
-            <div className="p-10 bg-white border border-slate-200 rounded-[2rem] space-y-6 hover:shadow-md transition-shadow">
+            <div className="p-10 bg-white border border-slate-200 rounded-4xl space-y-6 hover:shadow-md transition-shadow">
                <div className="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center">
                  <Zap className="w-6 h-6" />
                </div>
@@ -178,9 +178,9 @@ export const NotesNestPage = ({ onOpenContact }) => {
         <motion.section variants={itemVariants} className="space-y-6">
            <button 
              onClick={() => setActiveModalImage({ src: dashboardScreenshot, title: 'Dashboard Interface' })}
-             className="group relative w-full aspect-video rounded-[2rem] overflow-hidden border border-slate-200 bg-white p-2"
+             className="group relative w-full aspect-video rounded-4xl overflow-hidden border border-slate-200 bg-white p-2"
            >
-              <div className="w-full h-full rounded-[1.5rem] overflow-hidden relative">
+              <div className="w-full h-full rounded-3xl overflow-hidden relative">
                 <img 
                   src={dashboardScreenshot} 
                   loading="lazy" 
@@ -196,7 +196,7 @@ export const NotesNestPage = ({ onOpenContact }) => {
         </motion.section>
 
         {/* 6. CALL TO ACTION */}
-        <motion.section variants={itemVariants} className="p-12 bg-white rounded-[2rem] border border-slate-200 text-center space-y-6 shadow-sm">
+        <motion.section variants={itemVariants} className="p-12 bg-white rounded-4xl border border-slate-200 text-center space-y-6 shadow-sm">
            <h3 className="text-2xl font-bold">Ready to analyze the production code?</h3>
            <p className="text-slate-500 text-sm max-w-xl mx-auto">
              Discuss the Mongoose schema design, the TipTap sanitization logic, or the secure refresh-token lifecycle.

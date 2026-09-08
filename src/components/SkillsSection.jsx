@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Code, Layers, Cpu, Info, X } from 'lucide-react';
+import { Code, Layers, Database, Info, X } from 'lucide-react';
 import { SKILL_CATEGORIES } from '../data/scholarData';
 
 const cardVariants = {
@@ -19,14 +19,15 @@ const cardVariants = {
 const CATEGORY_ICONS = {
   code: Code,
   layers: Layers,
-  memory: Cpu,
+  memory: Database,
+  database: Database,
 };
 
 export const SkillsSection = () => {
   const [selectedSkill, setSelectedSkill] = useState(null);
 
   const getCategoryIcon = (iconName) => {
-    const Icon = CATEGORY_ICONS[iconName] || CATEGORY_ICONS.memory;
+    const Icon = CATEGORY_ICONS[iconName] || CATEGORY_ICONS.code;
     return <Icon className="h-5 w-5 text-[#0F172A]" aria-hidden="true" />;
   };
 
@@ -48,7 +49,7 @@ export const SkillsSection = () => {
             Technical Competencies
           </h2>
           <p className="text-[#334155] font-body-md text-body-md">
-            Core technologies and hardware platforms.
+            Production-ready technologies across the modern MERN stack ecosystem.
           </p>
         </motion.div>
 
@@ -57,7 +58,7 @@ export const SkillsSection = () => {
           {SKILL_CATEGORIES.map((category, index) => (
             <motion.div
               key={category.title}
-              id={`skills-card-${category.title.toLowerCase()}`}
+              id={`skills-card-${category.title.toLowerCase().replace(/\s+/g, '-')}`}
               custom={index}
               initial="hidden"
               whileInView="visible"
@@ -115,10 +116,10 @@ export const SkillsSection = () => {
                   <div className="flex items-center gap-3 flex-wrap">
                     <span className="font-headline-md text-xl text-[#0F172A] font-bold">{selectedSkill.name}</span>
                     <span className="font-label-sm text-label-sm bg-[#0F172A] text-white px-2.5 py-0.5 rounded-md">
-                      {selectedSkill.level}
+                      {selectedSkill.role || 'Core MERN'}
                     </span>
                     <span className="font-label-sm text-label-sm text-[#334155]">
-                      Experience: {selectedSkill.experience}
+                      Domain: {selectedSkill.experience}
                     </span>
                   </div>
                   <p className="font-body-md text-body-md text-[#334155] leading-relaxed max-w-3xl">
