@@ -83,27 +83,21 @@ export const ProjectsSection = ({ onSelectProject }) => {
                     decoding="async"
                   />
 
-                  {/* Interactive view indicator */}
-                  <div className="absolute inset-0 bg-[#0F172A]/0 group-hover/img:bg-[#0F172A]/10 transition-colors flex items-center justify-center pointer-events-none">
-                    <span className="opacity-0 group-hover/img:opacity-100 transition-opacity bg-[#0F172A] text-white font-label-sm text-label-sm px-3.5 py-1.5 rounded-lg shadow-lg flex items-center gap-2">
-                      {isChemistryLab ? (
-                        <>
-                          <FlaskConical className="w-3.5 h-3.5 text-blue-400" />
-                          <span>Open FYP Project Deck</span>
-                        </>
-                      ) : isRobot ? (
-                        <>
-                          <Cpu className="w-3.5 h-3.5 text-cyan-400" />
-                          <span>Explore Robotics Case Study</span>
-                        </>
-                      ) : (
-                        <>
-                          <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-                          <span>Launch Interactive View</span>
-                        </>
-                      )}
-                    </span>
-                  </div>
+                  {project.liveUrl && (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="absolute right-4 top-4 z-10 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/90 px-3 py-1.5 font-label-sm text-label-sm font-semibold text-slate-900 backdrop-blur-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-slate-300 hover:bg-white hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-300"
+                    >
+                      <span>Open NotesNest</span>
+                      <ExternalLink className="w-3.5 h-3.5" />
+                    </a>
+                  )}
+
+                  {/* Hover treatment without visible overlay label */}
+                  <div className="absolute inset-0 bg-[#0F172A]/0 transition-colors duration-300 group-hover/img:bg-[#0F172A]/5 pointer-events-none" />
                 </button>
 
                 {/* Project Information */}
@@ -165,17 +159,6 @@ export const ProjectsSection = ({ onSelectProject }) => {
                       <span>{project.actionText || 'Explore Project'}</span>
                       <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
                     </button>
-                    {project.liveUrl && (
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="ml-4 inline-flex items-center gap-2 font-label-md text-label-md font-semibold text-blue-700 hover:text-blue-900 transition-colors"
-                      >
-                        <span>Open NotesNest</span>
-                        <ExternalLink className="w-4 h-4" />
-                      </a>
-                    )}
                   </div>
                 </div>
               </motion.article>
