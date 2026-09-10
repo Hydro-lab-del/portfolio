@@ -82,10 +82,10 @@ export const SKILL_CATEGORIES = [
     title: "Frontend Architecture",
     icon: "code",
     skills: [
-      { name: "React 19", role: "Core Frontend", experience: "Web Projects", description: "Component-driven UI, modern hooks (useState, useEffect, useMemo), state management, and responsive SPA routing." },
-      { name: "JavaScript (ES6+)", role: "Core Language", experience: "Web Applications", description: "Modern ES6+ syntax, asynchronous programming (async/await, promises), DOM manipulation, closures, and modular architecture." },
-      { name: "Tailwind CSS", role: "UI Styling", experience: "Design Systems", description: "Utility-first responsive styling, modern layout design (flexbox/grid), custom tokens, and smooth micro-interactions." },
-      { name: "Redux Toolkit", role: "State Management", experience: "App Architecture", description: "Centralized state management, slices, reducers, and predictable state flow for complex client applications." },
+      { name: "React 19", role: "Core Frontend" },
+      { name: "JavaScript (ES6+)", role: "Core Language" },
+      { name: "Tailwind CSS", role: "UI Styling" },
+      { name: "Redux Toolkit", role: "State Management" },
       
     ]
   },
@@ -93,20 +93,20 @@ export const SKILL_CATEGORIES = [
     title: "Backend & API Engineering",
     icon: "layers",
     skills: [
-      { name: "Node.js", role: "Server Runtime", experience: "Backend Systems", description: "Asynchronous event-driven server runtime, RESTful service creation, file streams, and npm ecosystem management." },
-      { name: "Express.js", role: "API Framework", experience: "Backend Systems", description: "Modular API routing, custom middleware pipelines, request validation, error-handling middleware, and CORS configuration." },
-      { name: "RESTful APIs", role: "API Architecture", experience: "Full-Stack Integration", description: "Clean CRUD endpoint design, HTTP status conventions, URL routing, JSON data exchange, and pagination." },
-      { name: "JWT Auth & Security", role: "Web Security", experience: "Auth Workflows", description: "Dual-token authentication workflows, access/refresh tokens, password hashing with bcrypt, and protected routes." }
+      { name: "Node.js", role: "Server Runtime" },
+      { name: "Express.js", role: "API Framework" },
+      { name: "RESTful APIs", role: "API Architecture" },
+      { name: "JWT Auth & Security", role: "Web Security" }
     ]
   },
   {
     title: "Database & Tooling",
     icon: "memory",
     skills: [
-      { name: "MongoDB Atlas", role: "NoSQL Database", experience: "Cloud Databases", description: "NoSQL document database, schema modeling, collection management, document indexing, and cloud Atlas configuration." },
-      { name: "Mongoose ODM", role: "Data Modeling", experience: "Data Layer", description: "Mongoose schemas, validation rules, relationship references, pre/post middleware hooks, and aggregation pipelines." },
-      { name: "Postman", role: "API Testing", experience: "Testing & Debugging", description: "Endpoint debugging, automated request testing, environment variables, and API documentation." },
-      { name: "Git & GitHub", role: "Version Control", experience: "Collaboration", description: "Version control workflows, commit standards, branch management, pull requests, and repository maintenance." }
+      { name: "MongoDB Atlas", role: "NoSQL Database" },
+      { name: "Mongoose ODM", role: "Data Modeling" },
+      { name: "Postman", role: "API Testing" },
+      { name: "Git & GitHub", role: "Version Control" }
     ]
   }
 ];

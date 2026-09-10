@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import { Code, Layers, Database, Info, X } from 'lucide-react';
+import React from 'react';
+import { motion } from 'motion/react';
+import { Code, Layers, Database } from 'lucide-react';
 import { SKILL_CATEGORIES } from '../data/scholarData';
 
 const cardVariants = {
@@ -24,8 +24,6 @@ const CATEGORY_ICONS = {
 };
 
 export const SkillsSection = () => {
-  const [selectedSkill, setSelectedSkill] = useState(null);
-
   const getCategoryIcon = (iconName) => {
     const Icon = CATEGORY_ICONS[iconName] || CATEGORY_ICONS.code;
     return <Icon className="h-5 w-5 text-[#0F172A]" aria-hidden="true" />;
@@ -80,17 +78,13 @@ export const SkillsSection = () => {
                 {/* Skills Badges */}
                 <div className="flex flex-wrap gap-2">
                   {category.skills.map((skill) => (
-                    <motion.button
+                    <motion.span
                       whileHover={{ scale: 1.04 }}
-                      whileTap={{ scale: 0.96 }}
                       key={skill.name}
-                      type="button"
-                      onClick={() => setSelectedSkill(skill)}
-                      className="bg-surface-variant hover:bg-outline-variant text-[#0F172A] px-3 py-1.5 rounded-md font-label-sm text-label-sm border border-outline-variant transition-colors cursor-pointer text-left shadow-2xs"
-                      title="Click to view competency details"
+                      className="bg-surface-variant text-[#0F172A] px-3 py-1.5 rounded-md font-label-sm text-label-sm border border-outline-variant shadow-2xs"
                     >
                       {skill.name}
-                    </motion.button>
+                    </motion.span>
                   ))}
                 </div>
               </div>
@@ -98,48 +92,6 @@ export const SkillsSection = () => {
           ))}
         </div>
 
-        {/* Interactive Skill Detail Popover / Inspector */}
-        <AnimatePresence>
-          {selectedSkill && (
-            <motion.div
-              initial={{ opacity: 0, y: 12, scale: 0.98 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: 10, scale: 0.98 }}
-              transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className="p-6 bg-surface-container border border-outline-variant rounded-2xl flex items-start justify-between gap-4 soft-shadow"
-            >
-              <div className="flex items-start gap-4">
-                <div className="p-2.5 bg-[#0F172A] text-white rounded-xl mt-0.5 shadow-xs">
-                  <Info className="w-5 h-5" />
-                </div>
-                <div className="space-y-2">
-                  <div className="flex items-center gap-3 flex-wrap">
-                    <span className="font-headline-md text-xl text-[#0F172A] font-bold">{selectedSkill.name}</span>
-                    <span className="font-label-sm text-label-sm bg-[#0F172A] text-white px-2.5 py-0.5 rounded-md">
-                      {selectedSkill.role || 'Core MERN'}
-                    </span>
-                    <span className="font-label-sm text-label-sm text-on-surface-variant">
-                      Domain: {selectedSkill.experience}
-                    </span>
-                  </div>
-                  <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed max-w-3xl">
-                    {selectedSkill.description}
-                  </p>
-                </div>
-              </div>
-
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                type="button"
-                onClick={() => setSelectedSkill(null)}
-                className="p-1.5 text-on-surface-variant hover:text-[#0F172A] hover:bg-surface-variant rounded-lg transition-colors cursor-pointer"
-              >
-                <X className="w-5 h-5" />
-              </motion.button>
-            </motion.div>
-          )}
-        </AnimatePresence>
       </div>
     </section>
   );
