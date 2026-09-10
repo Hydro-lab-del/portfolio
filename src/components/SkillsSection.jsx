@@ -32,8 +32,8 @@ export const SkillsSection = () => {
   };
 
   return (
-    <section className="bg-white py-20 border-b border-[#E5E7EB]" id="skills">
-      <div className="max-w-[1120px] mx-auto px-4 sm:px-12 flex flex-col gap-12">
+    <section className="bg-white py-20 border-b border-outline-variant" id="skills">
+      <div className="max-w-container-max mx-auto px-4 sm:px-12 flex flex-col gap-12">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -48,7 +48,7 @@ export const SkillsSection = () => {
           <h2 className="font-headline-lg text-headline-lg text-[#0F172A] tracking-tight">
             Technical Competencies
           </h2>
-          <p className="text-[#334155] font-body-md text-body-md">
+          <p className="text-on-surface-variant font-body-md text-body-md">
             Production-ready technologies across the modern MERN stack ecosystem.
           </p>
         </motion.div>
@@ -65,10 +65,10 @@ export const SkillsSection = () => {
               viewport={{ once: true, margin: '-60px' }}
               variants={cardVariants}
               whileHover={{ y: -4, transition: { duration: 0.2 } }}
-              className="bg-white border border-[#E5E7EB] rounded-2xl p-8 soft-shadow flex flex-col justify-between hover:border-slate-300 transition-colors"
+              className="bg-white border border-outline-variant rounded-2xl p-8 soft-shadow flex flex-col justify-between hover:border-slate-300 transition-colors"
             >
               <div>
-                <div className="h-10 w-10 rounded-lg bg-[#F3F4F6] flex items-center justify-center border border-[#E5E7EB] mb-6 text-[#0F172A] shadow-2xs">
+                <div className="h-10 w-10 rounded-lg bg-surface-variant flex items-center justify-center border border-outline-variant mb-6 text-[#0F172A] shadow-2xs">
                   {getCategoryIcon(category.icon)}
                 </div>
 
@@ -86,7 +86,7 @@ export const SkillsSection = () => {
                       key={skill.name}
                       type="button"
                       onClick={() => setSelectedSkill(skill)}
-                      className="bg-[#F3F4F6] hover:bg-[#E5E7EB] text-[#0F172A] px-3 py-1.5 rounded-md font-label-sm text-label-sm border border-[#E5E7EB] transition-colors cursor-pointer text-left shadow-2xs"
+                      className="bg-surface-variant hover:bg-outline-variant text-[#0F172A] px-3 py-1.5 rounded-md font-label-sm text-label-sm border border-outline-variant transition-colors cursor-pointer text-left shadow-2xs"
                       title="Click to view competency details"
                     >
                       {skill.name}
@@ -106,7 +106,7 @@ export const SkillsSection = () => {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 10, scale: 0.98 }}
               transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className="p-6 bg-[#F9FAFB] border border-[#E5E7EB] rounded-2xl flex items-start justify-between gap-4 soft-shadow"
+              className="p-6 bg-surface-container border border-outline-variant rounded-2xl flex items-start justify-between gap-4 soft-shadow"
             >
               <div className="flex items-start gap-4">
                 <div className="p-2.5 bg-[#0F172A] text-white rounded-xl mt-0.5 shadow-xs">
@@ -118,11 +118,11 @@ export const SkillsSection = () => {
                     <span className="font-label-sm text-label-sm bg-[#0F172A] text-white px-2.5 py-0.5 rounded-md">
                       {selectedSkill.role || 'Core MERN'}
                     </span>
-                    <span className="font-label-sm text-label-sm text-[#334155]">
+                    <span className="font-label-sm text-label-sm text-on-surface-variant">
                       Domain: {selectedSkill.experience}
                     </span>
                   </div>
-                  <p className="font-body-md text-body-md text-[#334155] leading-relaxed max-w-3xl">
+                  <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed max-w-3xl">
                     {selectedSkill.description}
                   </p>
                 </div>
@@ -133,7 +133,7 @@ export const SkillsSection = () => {
                 whileTap={{ scale: 0.9 }}
                 type="button"
                 onClick={() => setSelectedSkill(null)}
-                className="p-1.5 text-[#334155] hover:text-[#0F172A] hover:bg-[#F3F4F6] rounded-lg transition-colors cursor-pointer"
+                className="p-1.5 text-on-surface-variant hover:text-[#0F172A] hover:bg-surface-variant rounded-lg transition-colors cursor-pointer"
               >
                 <X className="w-5 h-5" />
               </motion.button>

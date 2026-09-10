@@ -86,7 +86,7 @@ export const SKILL_CATEGORIES = [
       { name: "JavaScript (ES6+)", role: "Core Language", experience: "Web Applications", description: "Modern ES6+ syntax, asynchronous programming (async/await, promises), DOM manipulation, closures, and modular architecture." },
       { name: "Tailwind CSS", role: "UI Styling", experience: "Design Systems", description: "Utility-first responsive styling, modern layout design (flexbox/grid), custom tokens, and smooth micro-interactions." },
       { name: "Redux Toolkit", role: "State Management", experience: "App Architecture", description: "Centralized state management, slices, reducers, and predictable state flow for complex client applications." },
-      { name: "HTML5 & CSS3", role: "Web Foundation", experience: "Semantic Web", description: "Semantic markup, modern CSS layouts, responsive web principles, and accessibility standards." }
+      
     ]
   },
   {
@@ -111,32 +111,3 @@ export const SKILL_CATEGORIES = [
   }
 ];
 
-export const INITIAL_NOTES = [
-  {
-    id: "note-1",
-    title: "Q3 Goals & Ideas",
-    category: "Project Alpha",
-    content: `### Objectives\n- Finish the chemistry lab titration module\n- Deploy NotesNest to production on Vercel\n\n### Key Results\n- Ship WebGL workbench with 60 FPS target\n- Complete user auth flow with JWT refresh tokens\n\n### Brainstorming\n- Explore adding calorimetry simulation\n- Consider adding collaborative editing`,
-    tags: ["Quarterly", "Planning", "Sprint"],
-    updatedAt: "2 mins ago",
-    isEncrypted: true
-  },
-  {
-    id: "note-2",
-    title: "ESP32-S2 Gait Dynamics",
-    category: "Robotics Core",
-    content: `### Inverse Kinematics Implementation\n- Coxa-Femur-Tibia 3-DOF trigonometric calculations running at 100Hz.\n- Servo horn alignment calibrated to reduce backlash.\n- Voice command triggers movement via priority interrupt on GPIO 14.`,
-    tags: ["Firmware", "Robotics", "Kinematics"],
-    updatedAt: "1 hour ago",
-    isEncrypted: true
-  },
-  {
-    id: "note-3",
-    title: "WebGL Shader Notes",
-    category: "Chemistry Lab",
-    content: `### Fragment Shader Work\n- Approximate van der Waals surfaces for molecule rendering.\n- Phong lighting with ambient occlusion on chemical bonds.\n- Runge-Kutta 4th Order ODE solver runs in a Web Worker thread.`,
-    tags: ["Graphics", "Shaders", "Performance"],
-    updatedAt: "Yesterday",
-    isEncrypted: false
-  }
-];
